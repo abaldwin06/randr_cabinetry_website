@@ -4,7 +4,7 @@ html, body {
   }
   
   header {
-    background-color: #333333;
+    background-color: #333;
     position: fixed;
     top: 0px;
     width: 100%;
@@ -17,7 +17,7 @@ html, body {
     text-align: center;
   }
   
-  nav li {
+  nav a li {
     color: #fff;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
@@ -25,7 +25,15 @@ html, body {
     display: inline-block;
     width: 100px;
   }
+
+  nav a:hover li {
+    color: hsla(0,0%,100%,0.6);
+  }
   
+  nav a:active li {
+    color: hsla(0,0%,100%,0.3);
+  }
+
   main {
     text-align: center;
     position: relative;
@@ -73,17 +81,17 @@ html, body {
     padding: 16px 40px;
     text-decoration: none;
     text-transform: uppercase;
+    border-radius: 5px;
   }
-  
-  .btn-default {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    font-size: 10px;
-    letter-spacing: 1.3px;
-    padding: 10px 20px;
-    text-decoration: none;
-    text-transform: uppercase;  
-    margin-bottom: 20px;      
+
+  .btn-main:hover {
+    border: 2px solid hsla(0,0%,100%,0.8);
+  }
+
+  .btn-main:active {
+    background-color: hsla(0,0%,100%,0.8);
+    color: #333;
+    border: 2px solid #333;
   }
     
   .container {
@@ -128,8 +136,8 @@ html, body {
   }
   
   .supporting a {
-    background-color: white;
-    color: #333333;
+    background-color: #fff;
+    color: #333;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     font-size: 12px;
@@ -138,9 +146,19 @@ html, body {
     text-transform: uppercase;
     padding: 10px;
     margin-bottom: 10px;
-    border: 2px solid #333333; 
+    border: 2px solid #333; 
+    border-radius: 5px;
   }
   
+  .supporting a:hover {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .supporting a:active {
+    border: 2px solid #fff; 
+  }
+
   @media (max-width: 500px) {
     main h1 {
       font-size: 50px;
