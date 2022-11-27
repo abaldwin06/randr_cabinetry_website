@@ -1,8 +1,11 @@
 html, body {
     margin: 0;
     padding: 0;
+    font-family: 'Raleway', sans-serif;
   }
-  
+
+
+/* HEADER & NAV */
   header {
     background-color: #333;
     position: fixed;
@@ -19,9 +22,9 @@ html, body {
   
   nav a li {
     color: #fff;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
+    letter-spacing: 1.3px;
     display: inline-block;
     width: 100px;
   }
@@ -34,6 +37,7 @@ html, body {
     color: hsla(0,0%,100%,0.3);
   }
 
+/* COVER PHOTO HEADER */
   main {
     text-align: center;
     position: relative;
@@ -43,27 +47,15 @@ html, body {
   main h1 {
     color: #333;
     background-color: hsla(0,0%,100%,0.6);
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
+    font-weight: 800;
     font-size: 70px;
     margin-top: 80px;
     margin-bottom: 80px;
     text-transform: uppercase;
   }
   
-  footer {
-    background-color: #333;
-    color: #fff;
-  }
-  
-  footer p {
-    font-family: 'Raleway', sans-serif;
-    text-transform: uppercase;
-    font-size: 12px;
-  }
-  
   .jumbotron {
-    height: 700px;
+    height: 650px;
     background-image: url("./resources/brownkitchen.jpeg");
     background-size: 85%;
     background-repeat: no-repeat;
@@ -74,31 +66,31 @@ html, body {
   .btn-main {
     background-color: #333;
     color: #fff;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    font-size: 18px;
-    letter-spacing: 1.3px;
-    padding: 16px 40px;
+    border: 2px solid #333; 
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    padding: 15px 20px;
     text-decoration: none;
     text-transform: uppercase;
-    border-radius: 5px;
+    border-radius: 5px; 
   }
 
   .btn-main:hover {
-    border: 2px solid hsla(0,0%,100%,0.8);
+    background-color: #fff;
+    color: #333;
   }
 
   .btn-main:active {
-    background-color: hsla(0,0%,100%,0.8);
+    background-color: hsl(0,0%,90%);
     color: #333;
-    border: 2px solid #333;
   }
-    
+  
+  /* SUPPORTING SECTION */
   .container {
-    margin: 0 auto;
     text-align: center;
     display: block;
-    padding: 40px 0px;
+    padding: 20px 0px;
   }
 
   .supporting {
@@ -107,7 +99,6 @@ html, body {
   }
   
   .supporting .col {
-    font-family: 'Raleway', sans-serif;
     text-align: center;
     display: inline-block;
     position: relative;
@@ -136,36 +127,38 @@ html, body {
   }
   
   .supporting a {
-    background-color: #fff;
-    color: #333;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    font-size: 12px;
+    display: block;
+    width: 60%;
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #333; 
+    font-weight: 500;
+    font-size: 14px;
     letter-spacing: 1.3px;
     text-decoration: none;
     text-transform: uppercase;
     padding: 10px;
-    margin-bottom: 10px;
-    border: 2px solid #333; 
+    margin: 5px auto;
     border-radius: 5px;
   }
   
   .supporting a:hover {
-    background-color: #333;
-    color: #fff;
+    background-color: #fff;
+    color: #333;
   }
 
   .supporting a:active {
-    border: 2px solid #fff; 
+    background-color: hsl(0,0%,90%);
+    color: #333;
   }
 
-  @media (max-width: 500px) {
-    main h1 {
-      font-size: 50px;
-      padding: 0 40px;
-    }
+  /* FOOTER */ 
+  footer {
+    background-color: #333;
+    color: #fff;
+  }
   
-    .supporting .col {
-      width: 100%;
-    }
+  footer p {
+    text-transform: uppercase;
+    font-size: 12px;
   }
