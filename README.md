@@ -32,5 +32,3 @@ This project's goal is to create a landing zone for Matt's customers to see the 
 - Headshot for Team page
 - Business phone number, address, email address
 - Are there references we could put on About page?
-
-Testing merging changes to a new branch
