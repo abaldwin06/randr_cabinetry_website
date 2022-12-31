@@ -4,6 +4,22 @@ html, body {
     font-family: 'Raleway', sans-serif;
   }
 
+  .vertcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }
+
+  .rowcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+  }
 
 /* HEADER & NAV */
   header {
@@ -11,12 +27,11 @@ html, body {
     position: fixed;
     top: 0px;
     width: 100%;
+    height: 50px;
     z-index: 1;
   }
   
   nav {
-    margin: 0;
-    padding: 20px 0;
     text-align: center;
   }
   
@@ -41,7 +56,7 @@ html, body {
   main {
     text-align: center;
     position: relative;
-    top: 0px;
+    top: 50px;
   }
   
   main h1 {
@@ -49,31 +64,34 @@ html, body {
     background-color: hsla(0,0%,100%,0.6);
     font-weight: 800;
     font-size: 70px;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin: 20px;
     text-transform: uppercase;
+    width: 100%;
   }
   
   .jumbotron {
-    height: 650px;
+    flex-basis: 1500px;
     background-image: url("./resources/whiteandnavycabinets.jpg");
     background-size: 85%;
     background-repeat: no-repeat;
     background-position-x: center;
+    background-position-y: center;
     background-color: hsl(0,0%,96%);
+    padding: 50px 0px;
   }
   
   .btn-main {
     background-color: #333;
     color: #fff;
     border: 2px solid #333; 
+    border-radius: 5px; 
+    padding: 15px 20px;
+    margin: 20px;
     font-weight: 500;
     font-size: 20px;
     letter-spacing: 1.5px;
-    padding: 15px 20px;
     text-decoration: none;
     text-transform: uppercase;
-    border-radius: 5px; 
   }
 
   .btn-main:hover {
@@ -87,25 +105,19 @@ html, body {
   }
   
   /* SUPPORTING SECTION */
-  .container {
-    text-align: center;
-    display: block;
-    padding: 20px 0px;
+  section {
+    position: relative;
+    top: 50px;
   }
 
   .supporting {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 30px 10%;
   }
-  
-  .supporting .col {
+
+  .rowcontainer .item {
+    flex: 1 1 25%;
     text-align: center;
-    display: inline-block;
-    position: relative;
-    top: 0px;
-    width: 225px;
-    margin: 0 40px;
-    padding: 20px 0;
+    padding: 20px;
   }
   
   .supporting img {
@@ -128,18 +140,18 @@ html, body {
   
   .supporting a {
     display: block;
-    width: 60%;
+    width: 50%;
     background-color: #333;
     color: #fff;
-    border: 2px solid #333; 
+    padding: 10px;
+    margin: 5px auto;
+    border: 2px solid #333;
+    border-radius: 5px; 
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 1.3px;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 10px;
-    margin: 5px auto;
-    border-radius: 5px;
   }
   
   .supporting a:hover {
@@ -156,6 +168,8 @@ html, body {
   footer {
     background-color: #333;
     color: #fff;
+    position: relative;
+    top: 50px;
   }
   
   footer p {
