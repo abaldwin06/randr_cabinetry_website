@@ -7,7 +7,7 @@ html, body {
   .vertcontainer {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
   }
@@ -38,8 +38,8 @@ html, body {
   nav a li {
     color: #fff;
     font-weight: 500;
-    font-size: 16px;
-    letter-spacing: 1.3px;
+    font-size: 1rem;
+    letter-spacing: 0.081rem;
     display: inline-block;
     width: 100px;
   }
@@ -63,7 +63,7 @@ html, body {
     color: #333;
     background-color: hsla(0,0%,100%,0.6);
     font-weight: 800;
-    font-size: 70px;
+    font-size: 4.375rem;
     margin: 20px;
     text-transform: uppercase;
     width: 100%;
@@ -88,8 +88,8 @@ html, body {
     padding: 15px 20px;
     margin: 20px;
     font-weight: 500;
-    font-size: 20px;
-    letter-spacing: 1.5px;
+    font-size: 1.25rem;
+    letter-spacing: 0.094rem;
     text-decoration: none;
     text-transform: uppercase;
   }
@@ -114,25 +114,38 @@ html, body {
   .rowcontainer .item {
     flex: 1 1 25%;
     text-align: center;
-    padding: 20px;
+    padding: 0px 20px;
+    overflow: hidden;
   }
   
   .item img {
-    height: 200px;
+    max-width: 75%;
+    max-height: 225px;
+    height: auto;
+    display: block; 
+    aspect-ratio: 1 / 1;
+    padding: 10px 0px;
   }
   
   .item h2 {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    height: 3.5rem;
     font-weight: 600;
-    font-size: 23px;
+    font-size: 1.438rem;
     text-transform: uppercase;
   }
   
   .item p {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    height: 4.5rem;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    padding: 0 20px;
-    margin-bottom: 20px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding: 0 2rem;
   }
   
   .item a {
@@ -141,12 +154,12 @@ html, body {
     background-color: #333;
     color: #fff;
     padding: 10px;
-    margin: 5px auto;
+    margin: 10px auto;
     border: 2px solid #333;
     border-radius: 5px; 
     font-weight: 500;
-    font-size: 14px;
-    letter-spacing: 1.3px;
+    font-size: 0.875rem;
+    letter-spacing: 0.081rem;
     text-decoration: none;
     text-transform: uppercase;
   }
@@ -167,9 +180,8 @@ html, body {
     position: relative;
     top: 50px;
     height: 50px;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 500;
-
   }
 
   footer.rowcontainer {
