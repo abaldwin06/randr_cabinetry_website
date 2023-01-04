@@ -29,10 +29,10 @@ html, body {
     width: 100%;
     height: 50px;
     z-index: 1;
+    text-align: center;
   }
   
   nav {
-    text-align: center;
   }
   
   nav a li {
@@ -108,9 +108,6 @@ html, body {
   section {
     position: relative;
     top: 50px;
-  }
-
-  .supporting {
     padding: 30px 10%;
   }
 
@@ -120,17 +117,17 @@ html, body {
     padding: 20px;
   }
   
-  .supporting img {
+  .item img {
     height: 200px;
   }
   
-  .supporting h2 {
+  .item h2 {
     font-weight: 600;
     font-size: 23px;
     text-transform: uppercase;
   }
   
-  .supporting p {
+  .item p {
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
@@ -138,7 +135,7 @@ html, body {
     margin-bottom: 20px;
   }
   
-  .supporting a {
+  .item a {
     display: block;
     width: 50%;
     background-color: #333;
@@ -154,12 +151,12 @@ html, body {
     text-transform: uppercase;
   }
   
-  .supporting a:hover {
+  .item a:hover {
     background-color: #fff;
     color: #333;
   }
 
-  .supporting a:active {
+  .item a:active {
     background-color: hsl(0,0%,90%);
     color: #333;
   }
@@ -167,12 +164,40 @@ html, body {
   /* FOOTER */ 
   footer {
     background-color: #333;
-    color: #fff;
     position: relative;
     top: 50px;
+    height: 50px;
+    font-size: 14px;
+    font-weight: 500;
+
+  }
+
+  footer.rowcontainer {
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+  }
+
+  footer li {
+    color: #fff;
+    display: inline-block;
+
+  }
+
+  footer li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  footer li a:hover {
+    color: hsla(0,0%,100%,0.6);
   }
   
-  footer p {
-    text-transform: uppercase;
-    font-size: 12px;
+  footer li a:active {
+    color: hsla(0,0%,100%,0.3);
+  }
+
+  footer li+li::before {
+    content: " - ";
+    padding: 0 30px;
   }
