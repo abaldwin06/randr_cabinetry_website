@@ -22,17 +22,15 @@ html, body {
   }
 
 /* HEADER & NAV */
+
   header {
     background-color: #333;
     position: fixed;
-    top: 0px;
+    top: 0;
     width: 100%;
-    height: 50px;
+    height: 3.125rem;
     z-index: 1;
     text-align: center;
-  }
-  
-  nav {
   }
   
   nav a li {
@@ -41,7 +39,7 @@ html, body {
     font-size: 1rem;
     letter-spacing: 0.081rem;
     display: inline-block;
-    width: 100px;
+    width: 6.25rem;
   }
 
   nav a:hover li {
@@ -52,11 +50,87 @@ html, body {
     color: hsla(0,0%,100%,0.3);
   }
 
+.mobile {
+    display: none;
+  }
+
+ @media only screen and (max-width: 895px) {
+    html {
+      font-size: 14px;
+    } 
+  }
+
+/* MOBILE HEADER & NAV */
+
+  @media only screen and (max-width: 425px) {
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: block;
+    }
+    div.mobile.dropdown {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+    h1.mobile {
+      display: block;
+      width: fit-content;
+      margin: 0;
+      color: #fff;
+      font-weight: 800;
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding-left: 1rem;
+    }
+    .dropdown {
+      display: block;
+      position: relative;
+      height: 3rem;
+      width: auto;
+      cursor: pointer;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 3rem;
+      right: 0;
+      text-align: right;
+      background-color: #f9f9f9;
+      width: 6.25rem;
+      height: auto;
+      padding: .5rem;
+      z-index: 2;
+    }
+    .dropdown-content a {
+      text-decoration: none;
+      color: #333;
+      line-height: 1.5rem;
+      width: 100%;
+      padding: .25rem 1rem;
+    }
+   .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #fff;
+      color: #333;
+      font-weight: 700;
+    }
+
+
+  }
+
 /* COVER PHOTO HEADER */
   main {
     text-align: center;
     position: relative;
-    top: 50px;
+    top: 3.125rem;
   }
   
   main h1 {
@@ -64,20 +138,20 @@ html, body {
     background-color: hsla(0,0%,100%,0.6);
     font-weight: 800;
     font-size: 4.375rem;
-    margin: 20px;
+    margin: 1.25rem;
     text-transform: uppercase;
     width: 100%;
   }
   
   .jumbotron {
-    flex-basis: 1500px;
+    flex-basis: 93.75rem;
     background-image: url("./resources/whiteandnavycabinets.jpg");
     background-size: 85%;
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
     background-color: hsl(0,0%,96%);
-    padding: 50px 0px;
+    padding: 3.125rem 0;
   }
   
   .btn-main {
@@ -85,8 +159,8 @@ html, body {
     color: #fff;
     border: 2px solid #333; 
     border-radius: 5px; 
-    padding: 15px 20px;
-    margin: 20px;
+    padding: .938rem 1.25rem;
+    margin: 1.25rem;
     font-weight: 500;
     font-size: 1.25rem;
     letter-spacing: 0.094rem;
@@ -103,28 +177,86 @@ html, body {
     background-color: hsl(0,0%,90%);
     color: #333;
   }
+
+  @media only screen and (max-width: 810px) {
+    .jumbotron {
+      background-size: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    .jumbotron {
+      padding: 1rem 0;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .jumbotron {
+      padding: 1.4rem 0;
+    }
+
+    main h1 {
+      color: #333;
+      font-size: 3rem;
+      margin: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    .btn-main {
+      padding: .45rem 0.75rem;
+      margin: 0.75rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.094rem;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    .jumbotron h1 {
+      display: none;
+    }
+    .jumbotron {
+      padding: 3rem 0;
+    }
+    .btn-main {
+      padding: .75rem 1rem;
+      font-size: 1.25rem;
+      background-color: #fff;
+      color: #333;
+      font-weight: 600;
+    }
+    .btn-main:hover {
+      background-color: #333;
+      color: #fff;
+    }
+  
+    .btn-main:active {
+      background-color: #333;
+      color: hsl(0,0%,90%);
+    }
+  }
   
   /* SUPPORTING SECTION */
+
   section {
     position: relative;
-    top: 50px;
-    padding: 30px 10%;
+    top: 3.125rem;
+    padding: 1.875rem 10%;
   }
 
   .rowcontainer .item {
     flex: 1 1 25%;
     text-align: center;
-    padding: 0px 20px;
+    padding: 0 1.25rem;
     overflow: hidden;
   }
   
   .item img {
-    max-width: 75%;
+    max-width: 70%;
     max-height: 225px;
     height: auto;
     display: block; 
     aspect-ratio: 1 / 1;
-    padding: 10px 0px;
+    padding: 0.625rem 0;
   }
   
   .item h2 {
@@ -153,8 +285,8 @@ html, body {
     width: 50%;
     background-color: #333;
     color: #fff;
-    padding: 10px;
-    margin: 10px auto;
+    padding: 0.625rem;
+    margin: 0.625rem auto;
     border: 2px solid #333;
     border-radius: 5px; 
     font-weight: 500;
@@ -174,12 +306,40 @@ html, body {
     color: #333;
   }
 
+  @media only screen and (max-width: 895px) {
+    .rowcontainer .item {
+      flex: 1 1 35%;
+    }
+  }
+
+  @media only screen and (max-width: 535px) {
+    section {
+      padding: 1.875rem 5%;
+    }
+    .item p {
+      padding: 0 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    section.rowcontainer {
+      flex-direction: column;
+    }
+    .item h2 {
+      height: 2rem;
+    }
+    .item p {
+      padding: 0 2rem;
+      height: 3.5rem;
+    }
+  }
+
   /* FOOTER */ 
   footer {
     background-color: #333;
     position: relative;
-    top: 50px;
-    height: 50px;
+    top: 3.125rem;
+    height: 3.125rem;
     font-size: 0.875rem;
     font-weight: 500;
   }
@@ -209,7 +369,24 @@ html, body {
     color: hsla(0,0%,100%,0.3);
   }
 
-  footer li+li::before {
+  footer li::after {
     content: " - ";
-    padding: 0 30px;
+    padding: 0 1.875rem;
+  }
+
+  footer li:last-of-type::after {
+    content: none;
+  }
+
+  @media only screen and (max-width: 675px) {
+    footer li:first-of-type {
+      display: none;
+    }
+    footer.rowcontainer {
+      justify-content: center;
+    }
+    ul {
+      padding-inline-start: 0;
+    }
+    
   }
