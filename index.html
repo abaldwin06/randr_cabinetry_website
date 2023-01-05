@@ -13,13 +13,25 @@
     <!---HEADER & NAV--->
     <header>
         <nav>
-          <ul>
+          <ul class="desktop">
             <a href="#"><li> About </li></a>
             <a href="#"><li> Services </li></a> 
             <a href="#"><li> Gallery </li></a>
             <a href="#"><li> Contact </li></a> 
           </ul>
-        </nav>
+          <!---MOBILE HEADER & NAV--->
+          <div class="mobile dropdown">
+            <h1 class="mobile">R&R Cabinetry</h1>
+            <img src="./resources/dropdownicon.png" class="dropdown">
+            <div class="dropdown-content">
+              <a href="#">About</a>
+              <a href="#">Services</a>
+              <a href="#">Gallery</a>
+              <a href="#">Contact</a>
+            </div>
+          </div>
+          </nav>
+
     </header>
 
 <!---COVER PHOTO HEADER--->
@@ -84,7 +96,7 @@
     <footer class="rowcontainer">
         <ul>
           <li>&copy; R and R Cabinetry 2023</li>
-          <li>Phone: 720-238-9913</li>
+          <li><span class="desktop"> Phone: </span> 720-238-9913 </li>
           <li><a href="mailto:randrcabinetry@gmail.com">Email</a></li>
           <li><a href="https://www.instagram.com/randrcabinetry/">Instagram</a></li>
         </ul>
