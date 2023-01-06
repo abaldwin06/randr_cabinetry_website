@@ -1,3 +1,5 @@
+/* =====GLOBAL====== */
+
 html, body {
     margin: 0;
     padding: 0;
@@ -21,7 +23,7 @@ html, body {
     align-content: flex-start;
   }
 
-/* HEADER & NAV */
+/* =====HEADER & NAV====== */
 
   header {
     background-color: #333;
@@ -53,6 +55,8 @@ html, body {
 .mobile {
     display: none;
   }
+
+/* HEADER & NAV MEDIA QUERIES */
 
  @media only screen and (max-width: 895px) {
     html {
@@ -122,8 +126,6 @@ html, body {
       color: #333;
       font-weight: 700;
     }
-
-
   }
 
 /* COVER PHOTO HEADER */
@@ -144,7 +146,7 @@ html, body {
   }
   
   .jumbotron {
-    flex-basis: 93.75rem;
+    flex-basis: 100%;
     background-image: url("./resources/whiteandnavycabinets.jpg");
     background-size: 85%;
     background-repeat: no-repeat;
@@ -153,7 +155,7 @@ html, body {
     background-color: hsl(0,0%,96%);
     padding: 3.125rem 0;
   }
-  
+
   .btn-main {
     background-color: #333;
     color: #fff;
@@ -389,4 +391,28 @@ html, body {
       padding-inline-start: 0;
     }
     
+  }
+
+  /* ====ABOUT PAGE===== */
+
+  .jumbotron.aboutpage {
+    background-image: url("./resources/denver.jpg");
+  }
+
+  .rowcontainer.aboutpage {
+    align-items: stretch;
+  }
+
+  .item.aboutpage img {
+    max-height: 400px;
+  }
+  
+  .item.aboutpage p {
+    height: auto;
+    padding: .5rem 2rem;
+  }
+  .rowcontainer.reviews {
+    justify-content: center;
+    border: 1px solid red;
+    margin: 1rem; 
   }
