@@ -275,7 +275,7 @@ html, body {
     display: flex;
     align-items: center;
     margin: 0;
-    height: 4.5rem;
+    height: auto;
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -403,16 +403,110 @@ html, body {
     align-items: stretch;
   }
 
-  .item.aboutpage img {
-    max-height: 400px;
+  .aboutpage .item.images {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-basis: 60%;
   }
-  
-  .item.aboutpage p {
+
+  .aboutpage .item.images img {
+    padding: 1rem;
+    max-height: 20rem;
+    max-width: 20rem;
+    flex-basis: 20rem;
+    aspect-ratio: 1/1;
+  }
+
+  .aboutpage .item p {
     height: auto;
     padding: .5rem 2rem;
   }
-  .rowcontainer.reviews {
+  
+  section.reviews {
     justify-content: center;
-    border: 1px solid red;
-    margin: 1rem; 
+    width: 100%;
+    padding: 1rem 0 1.875rem 0;
+  }
+
+  .rowcontainer.reviews {
+    width: 100%;
+  }
+
+  .reviews a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: fit-content;
+    }
+
+
+  /* ====GALLERY PAGE===== */
+
+  .gallery {
+    width: 100%;
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .jumbotron.gallerypage {
+    background-image: url("./resources/replace.jpeg")
+  }
+
+    /* ====CONTACT PAGE ===== */
+
+  .jumbotron.contactpage {
+    background-image: url("./resources/kitchen.jpg")
+  }
+
+
+  .rowcontainer.contactpage {
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  .item.contactpage {
+
+  }
+
+  .contactpage .item {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-basis: 20%;
+  }
+
+  .contactpage .item.images img {
+    padding: 1rem;
+    max-height: 20rem;
+    max-width: 20rem;
+    flex-basis: 20rem;
+    aspect-ratio: 1/1;
+  }
+
+  .contactpage .item p {
+    height: auto;
+    padding: .5rem 2rem;
+  }
+
+  .contactpage li {
+    list-style-type: none;
+  }
+
+  .contactpage a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 65%;
+  }
+
+  img.icon {
+  height: 2rem;
+  padding: .5rem 1rem .5rem .5rem;
   }
