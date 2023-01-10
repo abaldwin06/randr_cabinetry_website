@@ -279,7 +279,7 @@ html, body {
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    padding: 0 2rem;
+    padding: 1rem 2rem;
   }
   
   .item a {
@@ -332,7 +332,6 @@ html, body {
     }
     .item p {
       padding: 0 2rem;
-      height: 3.5rem;
     }
   }
 
@@ -401,52 +400,63 @@ html, body {
 
   .rowcontainer.aboutpage {
     align-items: stretch;
+    justify-content: center;
   }
 
-  .aboutpage .item.images {
+  .aboutpage .item {
+    justify-content: center;
     align-items: center;
     align-content: center;
-    justify-content: center;
-    flex-basis: 60%;
+    flex-basis: 40%;
   }
 
   .aboutpage .item.images img {
     padding: 1rem;
-    max-height: 20rem;
-    max-width: 20rem;
+    max-height: 24rem;
+    max-width: 24rem;
     flex-basis: 20rem;
     aspect-ratio: 1/1;
   }
 
   .aboutpage .item p {
     height: auto;
-    padding: .5rem 2rem;
+    padding: 1rem 2rem;
   }
   
-  section.reviews {
+  .rowcontainer.reviews {
     justify-content: center;
     width: 100%;
     padding: 1rem 0 1.875rem 0;
   }
 
-  .rowcontainer.reviews {
-    width: 100%;
-  }
-
-  .reviews a {
+  .aboutpage a {
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
-    width: fit-content;
+    width: auto;
+    margin: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    }
+
+    @media only screen and (max-width: 700px) {
+      section {
+        padding: 1.875rem 5%;
+      }
+      .aboutpage .item {
+        flex-basis: 50%;
+      }
     }
 
 
   /* ====GALLERY PAGE===== */
 
   .gallery {
+    box-sizing: border-box;
     width: 100%;
-    padding: 2rem 4rem;
+    height: 100%;
+    padding: 2rem 2rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -458,19 +468,30 @@ html, body {
     background-image: url("./resources/replace.jpeg")
   }
 
+  @media only screen and (max-width: 600px) {
+    section.gallery {
+      padding: 2rem 2.5rem;
+    }
+  }
+  @media only screen and (max-width: 475px) {
+    section.gallery {
+      padding: 2rem 1rem;
+    }
+  }
+
     /* ====CONTACT PAGE ===== */
 
   .jumbotron.contactpage {
     background-image: url("./resources/kitchen.jpg")
   }
 
-
   .rowcontainer.contactpage {
     align-items: stretch;
     justify-content: center;
-  }
-
-  .item.contactpage {
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    padding: 1.875rem 5%;
+    min-height: 55vh;
 
   }
 
@@ -478,13 +499,14 @@ html, body {
     align-items: center;
     align-content: center;
     justify-content: center;
-    flex-basis: 20%;
+    flex-basis: 25%;
+
   }
 
   .contactpage .item.images img {
     padding: 1rem;
-    max-height: 20rem;
-    max-width: 20rem;
+    max-height: 24rem;
+    max-width: 24rem;
     flex-basis: 20rem;
     aspect-ratio: 1/1;
   }
@@ -493,9 +515,8 @@ html, body {
     height: auto;
     padding: .5rem 2rem;
   }
-
-  .contactpage li {
-    list-style-type: none;
+  p.doublesize {
+    font-size: 1.2rem;
   }
 
   .contactpage a {
@@ -503,10 +524,40 @@ html, body {
   justify-content: center;
   align-items: center;
   align-content: center;
-  width: 65%;
+  width: auto;
+  margin: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   }
 
   img.icon {
   height: 2rem;
   padding: .5rem 1rem .5rem .5rem;
+  }
+
+  @media only screen and (min-width: 1180px) {
+    .rowcontainer.contactpage {
+      padding: 1.875rem 10%;
+    }
+  }
+  @media only screen and (max-width: 1050px) {
+    .contactpage .item {
+      flex-basis: 30%;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .contactpage .item {
+      flex-basis: 50%;
+    }
+    .rowcontainer.contactpage {
+      padding: 1.875rem 10%;
+    }
+  }
+  @media only screen and (max-width: 375px) {
+    .contactpage h2 {
+      height: auto;
+    }
+    .rowcontainer.contactpage {
+      padding: 1.875rem 5%;
+    }
   }
